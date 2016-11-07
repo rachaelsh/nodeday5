@@ -1,0 +1,6 @@
+<div ng-if="currentUser"class="homepage"><h1>HOME!</h1>
+<h1>Hi, {{currentUser.name}}!</h1>
+
+</div>
+<div ng-if="!currentUser" class="broke404" ui-sref="login">
+</div>

@@ -1,15 +1,15 @@
-var cors = require('cors');
-var mongoose = require('mongoose');
+const cors = require('cors');
+const mongoose = require('mongoose');
 const express = require('express');//const is like var, but you can't change a const
-var bodyParser = require('body-parser');
-var session = require('express-session');//auth packages
-var passport = require('passport');//these are your auth packages
+const bodyParser = require('body-parser');
+const session = require('express-session');//auth packages
+const passport = require('passport');//these are your auth packages
 
-var carsCtrl = require('./controllers/carsCtrl');
-var userCtrl = require('./controllers/userCtrl');
-var config = require('./config/config');//passport/local auth secret
+const carsCtrl = require('./controllers/carsCtrl');
+const userCtrl = require('./controllers/userCtrl');
+const config = require('./config/config');//passport/local auth secret
 
-var app = express();
+const app = express();
 
 require('./config/passport.js')(passport);//auto invoking the file where our passport stuff (localauth) goes
 
